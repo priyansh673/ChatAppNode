@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Messenger</title>
+  <script src="/socket.io/socket.io.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/moment"></script>
+  <style>
+    body { font-family: Arial, sans-serif; }
+    #messages { list-style-type: none; padding: 0; }
+    #messages li { padding: 8px; border-bottom: 1px solid #ddd; }
+    #form { display: flex; }
+    #form input { flex: 1; padding: 8px; }
+    #form button { padding: 8px; }
+    #deleteBtn { margin-top: 10px; }
+  </style>
+</head>
+<body>
+  <h1>Chat App</h1>
+  
+  <div id="login">
+    <input id="username" placeholder="Enter your name" />
+    <button onclick="login()">Login</button>
+  </div>
+  <div id="chat" style="display:none;">
+    <ul id="messages"></ul>
+    <form id="form">
+      <input id="input" autocomplete="off" placeholder="Type a message...">
+      <button>Send</button>
+    </form>
+    <button id="deleteBtn">Delete All Messages</button>
+  </div>
+
+  <script src ='./socket.js'>
+   
+  </script>
+</body>
+</html>
+
