@@ -18,6 +18,12 @@ document.getElementById('form').addEventListener('submit', function(e) {
   }
 });
 
+const logout = () => {
+  username = '';
+  document.getElementById('login').style.display = 'block';
+  document.getElementById('chat').style.display = 'none';
+};
+
 document.getElementById('deleteBtn').addEventListener('click', function() {
   fetch('/messages', { method: 'DELETE' })
     .then(response => response.text())
